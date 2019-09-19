@@ -1,0 +1,36 @@
+FORMAT: 1A
+HOST: http://dummy.restapiexample.com/api/v1/
+
+#Employee Details
+
+Employee Details is a simple API allowing user view their details.
+
+##Employee [/employees]
+Get employee data
+
+### All employees [GET]
+Get all employee data
++ Response 200 (application/json)
+
+      
+    [
+        {
+           "id":"44681",
+           "employee_name":"John",
+           "employee_salary":"123",
+           "employee_age":"23",
+           "profile_image":""
+        },{
+           "id":"44682",
+           "employee_name":"Taylor",
+           "employee_salary":"1234",
+           "employee_age":"28",
+           "profile_image":""
+        },{
+           "id":"44683",
+           "employee_name":"Mark",
+           "employee_salary":"1235",
+           "employee_age":"23",
+           "profile_image":""
+        }
+    ]
