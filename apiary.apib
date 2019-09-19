@@ -5,14 +5,13 @@ HOST: http://dummy.restapiexample.com/api/v1/
 
 Employee Details is a simple API allowing user view their details.
 
-##Employee [/employees]
+## Employee [/employees]
 Get employee data
 
 ### All employees [GET]
 Get all employee data
 + Response 200 (application/json)
 
-      
     [
         {
            "id":"44681",
@@ -34,3 +33,80 @@ Get all employee data
            "profile_image":""
         }
     ]
+
+## Single user data [/employees/{id}]
+Get a single employee data
+ + parameters 
+    + id (number) 
+
+### View Single employee details [GET]
++ Response 200 (application/json)
+
+       [
+          {
+             "id":"719",
+             "employee_name":"David",
+             "employee_salary":"12345",
+             "employee_age":"44",
+             "profile_image":""
+          }
+        ] 
+    
+## Create New Employee [/create]
+
+Create new record in database
+
+### New employee[POST]
++ Request (application/json)
+   
+       {
+           "id":"",
+           "employee_name":"",
+           "employee_salary":"",
+           "employee_age":"",
+           "profile_image":""
+       }
+   
++ Response 201 (application/json)
+
+      [ 
+          {
+               "id":"719",
+               "employee_name":"David",
+               "employee_salary":"1235",
+               "employee_age":"45",
+               "profile_image":""
+          }
+       ]  
+       
+
+##  Update Details [PUT/update/{id}]
+Update an employee record
++ parameters 
+    + id (number)
+
++ Response 200 (application/json)
+
+      [
+          {
+               "id":"4444",
+               "employee_name":"Adan",
+               "employee_salary":"125",
+               "employee_age":"65",
+               "profile_image":""
+           }
+      ]
+     
+## Delete Employee [DELETE/delete/{id}]
+Delete an employee record
+
++ parameters
+    + id (number)
++ Response 200
+       [
+            {
+               "success":{
+                          "text":"successfully! deleted Records"
+                        }
+            }            
+       ]
